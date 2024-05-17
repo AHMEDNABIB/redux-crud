@@ -35,6 +35,18 @@
       "type": "expense",
       "amount": 44,
       "id": 6
+    },
+    {
+      "name": "pollob",
+      "type": "expense",
+      "amount": 200000,
+      "id": 7
+    },
+    {
+      "name": "pollob",
+      "type": "income",
+      "amount": 200000,
+      "id": 8
     }
   ]
 }
