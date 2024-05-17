@@ -19,7 +19,14 @@ export default function Form() {
 				amount: Number(amount),
 			})
 		);
+		  reset();
 	};
+
+	    const reset = () => {
+			setName("");
+			setType("");
+			setAmount("");
+		};
 
 	return (
 		<div className="form">

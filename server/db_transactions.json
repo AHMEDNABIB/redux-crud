@@ -29,6 +29,12 @@
       "type": "expense",
       "amount": 334,
       "id": 5
+    },
+    {
+      "name": "hello",
+      "type": "expense",
+      "amount": 44,
+      "id": 6
     }
   ]
 }
