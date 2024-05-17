@@ -5,6 +5,12 @@
       "type": "expense",
       "amount": 200000,
       "id": 7
+    },
+    {
+      "name": "hello",
+      "type": "income",
+      "amount": 44,
+      "id": 8
     }
   ]
 }
