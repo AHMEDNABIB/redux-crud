@@ -73,7 +73,7 @@ export default function Form() {
 		<div className="form">
 			<h3>Add new transaction</h3>
 
-			<form onSubmit={handleCreate}>
+			<form onSubmit={editMode ? handleUpdate : handleCreate}>
 				<div className="form-group">
 					<label>Name</label>
 					<input
@@ -127,7 +127,7 @@ export default function Form() {
 				<button disabled={isLoading} className="btn" type="submit">
 					{editMode ? "Update Transaction" : "Add Transaction"}
 				</button>
-				
+
 				{!isLoading && isError && (
 					<p className="error">There was an error occured</p>
 				)}

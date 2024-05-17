@@ -1,52 +1,10 @@
 {
   "transactions": [
     {
-      "id": 1,
-      "name": "Salary from Google",
-      "type": "income",
-      "amount": 1000000
-    },
-    {
-      "id": 2,
-      "name": "Family Expenses",
-      "type": "expense",
-      "amount": 200000
-    },
-    {
-      "name": "todos",
-      "type": "income",
-      "amount": 44,
-      "id": 3
-    },
-    {
-      "name": "hello",
-      "type": "income",
-      "amount": 334,
-      "id": 4
-    },
-    {
-      "name": "hello",
-      "type": "expense",
-      "amount": 334,
-      "id": 5
-    },
-    {
-      "name": "hello",
-      "type": "expense",
-      "amount": 44,
-      "id": 6
-    },
-    {
       "name": "pollob",
       "type": "expense",
       "amount": 200000,
       "id": 7
-    },
-    {
-      "name": "pollob",
-      "type": "income",
-      "amount": 200000,
-      "id": 8
     }
   ]
 }
