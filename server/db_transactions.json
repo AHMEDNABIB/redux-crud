@@ -17,6 +17,18 @@
       "type": "income",
       "amount": 44,
       "id": 3
+    },
+    {
+      "name": "hello",
+      "type": "income",
+      "amount": 334,
+      "id": 4
+    },
+    {
+      "name": "hello",
+      "type": "expense",
+      "amount": 334,
+      "id": 5
     }
   ]
 }
