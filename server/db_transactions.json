@@ -1,22 +1,16 @@
 {
   "transactions": [
     {
-      "name": "todos",
+      "name": "Toyota",
       "type": "income",
-      "amount": "5000",
+      "amount": 6452,
       "id": 1
     },
     {
-      "name": "Toyota",
+      "name": "hello",
       "type": "expense",
-      "amount": "12300000",
+      "amount": 645,
       "id": 2
-    },
-    {
-      "name": "todos",
-      "type": "expense",
-      "amount": "400",
-      "id": 3
     }
   ]
 }

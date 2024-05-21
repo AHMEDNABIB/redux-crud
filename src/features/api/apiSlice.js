@@ -18,7 +18,24 @@ export const apiSlice = createApi({
 				method: "POST",
 				body: data,
 			}),
-			invalidatesTags: ["Transactions"],
+			// invalidatesTags: ["Transactions"],
+			async onQueryStarted(
+				arg,
+				{ dispatch, queryFulfilled }
+			) {
+				try {
+                    const { data: createdTransaction } = await queryFulfilled;
+					const patchResult = dispatch(
+						apiSlice.util.updateQueryData(
+							"getTransactions",
+							undefined,
+							(draft) => {
+								draft.push(createdTransaction);
+							}
+						)
+					);
+				} catch {}
+			},
 		}),
 		editTransaction: builder.mutation({
 			query: ({ id, data }) => ({
@@ -45,14 +62,15 @@ export const apiSlice = createApi({
 							transactionToEdit.name = arg.data.name;
 							transactionToEdit.type = arg.data.type;
 							transactionToEdit.amount = arg.data.amount;
-						})
-                );
-            try {
-				await queryFulfilled;
-			} catch {
-				patchResult.undo();
-			}
-                
+						}
+					)
+				);
+
+				try {
+					await queryFulfilled;
+				} catch {
+					patchResult.undo();
+				}
 			},
 		}),
 		deleteTransaction: builder.mutation({
