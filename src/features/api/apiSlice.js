@@ -27,10 +27,33 @@ export const apiSlice = createApi({
 				body: data,
 			}),
 			// invalidatesTags: ["Transactions"],
-			invalidatesTags: (result, error, arg) => [
-				"Transactions",
-				{ type: "Transaction", id: arg.id },
-			],
+			// invalidatesTags: (result, error, arg) => [
+			// 	"Transactions",
+			// 	{ type: "Transaction", id: arg.id },
+			// ],
+
+			async onQueryStarted(arg, { queryFulfilled, dispatch }) {
+				console.log(arg);
+				const patchResult = dispatch(
+					apiSlice.util.updateQueryData(
+						"getTransactions",
+						undefined,
+						(draft) => {
+							const transactionToEdit = draft.find(
+								(c) => c.id == arg.id
+							);
+							transactionToEdit.name = arg.data.name;
+							transactionToEdit.type = arg.data.type;
+							transactionToEdit.amount = arg.data.amount;
+						})
+                );
+            try {
+				await queryFulfilled;
+			} catch {
+				patchResult.undo();
+			}
+                
+			},
 		}),
 		deleteTransaction: builder.mutation({
 			query: ({ id }) => ({

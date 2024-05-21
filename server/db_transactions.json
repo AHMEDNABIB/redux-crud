@@ -9,8 +9,14 @@
     {
       "name": "Toyota",
       "type": "expense",
-      "amount": "12300",
+      "amount": "12300000",
       "id": 2
+    },
+    {
+      "name": "todos",
+      "type": "expense",
+      "amount": "400",
+      "id": 3
     }
   ]
 }
