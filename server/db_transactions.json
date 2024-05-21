@@ -1,16 +1,16 @@
 {
   "transactions": [
     {
-      "name": "pollob",
-      "type": "expense",
-      "amount": 200000,
-      "id": 7
+      "name": "todos",
+      "type": "income",
+      "amount": "5000",
+      "id": 1
     },
     {
-      "name": "hello",
-      "type": "income",
-      "amount": 44,
-      "id": 8
+      "name": "Toyota",
+      "type": "expense",
+      "amount": "12300",
+      "id": 2
     }
   ]
 }

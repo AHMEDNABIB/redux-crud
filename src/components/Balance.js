@@ -1,13 +1,15 @@
-import { useSelector } from "react-redux";
+import { useGetTransactionsQuery } from "../features/api/apiSlice";
 import numberWithCommas from "../utils/numberWithCommas";
 
 export default function Balance() {
-	const { transactions } = useSelector((state) => state.transaction);
+	const { data: transactions } = useGetTransactionsQuery();
 
 	const calculateIncome = (transactions) => {
 		let income = 0;
+
 		transactions.forEach((transaction) => {
 			const { type, amount } = transaction;
+
 			if (type === "income") {
 				income += amount;
 			} else {

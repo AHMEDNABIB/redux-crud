@@ -1,6 +1,6 @@
 {
-    "name": "lws-json-server-expense-tracker",
-    "description": "Example in memory Expense Tracker api with json-server by Learn with Sumit",
+    "name": "",
+    "description": "",
     "version": "1.0.0",
     "main": "index.js",
     "scripts": {
@@ -9,6 +9,6 @@
     "dependencies": {
         "json-server": "^0.17.0"
     },
-    "keywords": [],
-    "author": "Sumit Saha, Learn with Sumit"
+    "keywords": []
+    
 }
