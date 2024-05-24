@@ -5,15 +5,17 @@ export default function Balance() {
 	const { data: transactions } = useGetTransactionsQuery();
 
 	const calculateIncome = (transactions) => {
+
+		
 		let income = 0;
 
 		transactions.forEach((transaction) => {
 			const { type, amount } = transaction;
 
 			if (type === "income") {
-				income += amount;
+				income += Number(amount);
 			} else {
-				income -= amount;
+				income -= Number(amount);
 			}
 		});
 
